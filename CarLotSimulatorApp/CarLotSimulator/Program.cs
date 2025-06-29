@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO.Pipes;
+using System.Collections.Generic;
 
 namespace CarLotSimulator
 {
@@ -8,6 +9,7 @@ namespace CarLotSimulator
         static void Main(string[] args)
         {
             var carLot1 = new CarLot();
+            
             //TODO
 
             //Create a seperate class file called Car
@@ -35,8 +37,11 @@ namespace CarLotSimulator
             car1.MakeHonkNoise("honk");
             
             carLot1.ParkingLot.Add(car1);
+            
+            Console.WriteLine($"Number of cars currently in the lot: {CarLot._numberOfCars}");
 
 
+            
             var car2 = new Car()
             {
                 Year = 1968,
@@ -49,14 +54,21 @@ namespace CarLotSimulator
             car2.MakeHonkNoise("HONK");
             
             carLot1.ParkingLot.Add(car2);
+            
+            Console.WriteLine($"Number of cars currently in the lot: {CarLot._numberOfCars}");
 
 
+            
             var car3 = new Car(2016, "Dodge", "Dart SXT", true);
 
             car3.MakeEngineNoise("Vroom");
             car3.MakeHonkNoise("Honk");
             
             carLot1.ParkingLot.Add(car3);
+            
+            Console.WriteLine($"Number of cars currently in the lot: {CarLot._numberOfCars}");
+            
+            
 
             //*************BONUS X 2*************//
 
